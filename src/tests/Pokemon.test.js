@@ -17,7 +17,8 @@ describe('componente <Pokemon.js />', () => {
     expect(weight).toBeDefined();
     expect(type).toHaveTextContent(/Electric/i);
     expect(name).toBeDefined();
-    expect(img.src).toBe('https://cdn2.bulbagarden.net/upload/b/b2/Spr_5b_025_m.png');
+    expect(img).toHaveAttribute('src', 'https://cdn2.bulbagarden.net/upload/b/b2/Spr_5b_025_m.png');
+    expect(img).toHaveAttribute('alt', 'Pikachu sprite');
   });
   it('Pokédex contém um link de navegação para exibir detalhes deste Pokémon', () => {
     const { history } = renderWithRouter(<App />);
