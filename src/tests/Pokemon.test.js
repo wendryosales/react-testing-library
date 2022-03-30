@@ -32,7 +32,7 @@ describe('componente <Pokemon.js />', () => {
     />);
 
     const favIcon = screen.getByRole('img', { name: /is marked as favorite/i });
-    expect(favIcon.src).toBe('/star-icon.svg');
+    expect(favIcon).toHaveAttribute('src', '/star-icon.svg');
     expect(favIcon).toBeDefined();
   });
 });
